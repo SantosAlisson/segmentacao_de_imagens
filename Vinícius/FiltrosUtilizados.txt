@@ -1,0 +1,23 @@
+Filtro de Conversão para Escala de Cinza:
+Descrição: A conversão para escala de cinza é aplicada para reduzir a complexidade da imagem, removendo as informações de cor e mantendo apenas a informação de intensidade luminosa.
+Justificativa: Isso simplifica a análise da imagem, tornando-a mais fácil de processar e segmentar, especialmente em casos onde a cor não é uma característica relevante para a detecção de objetos.
+
+Filtro de Suavização Gaussiana:
+Descrição: O filtro gaussiano é utilizado para suavizar a imagem, reduzindo o ruído e as variações de intensidade que podem dificultar a detecção de bordas.
+Justificativa: Ao aplicar este filtro, detalhes finos e variações de intensidade causadas por ruído são atenuados, resultando em uma imagem mais uniforme e preparada para a detecção precisa de bordas.
+
+Filtro de Detecção de Bordas Sobel:
+Descrição: O filtro de Sobel é aplicado para destacar as bordas na imagem, realçando as transições de intensidade que indicam a presença de objetos ou limites.
+Justificativa: Este filtro é fundamental para a etapa de segmentação, pois permite identificar os contornos dos objetos de interesse, fornecendo informações importantes para a separação entre objeto e fundo.
+
+Limiarização Binária:
+Descrição: A limiarização é utilizada para simplificar a imagem resultante do filtro de Sobel, convertendo-a em uma forma binária onde os pixels são classificados como pertencentes ao objeto ou ao fundo com base em um valor de limiar.
+Justificativa: Esta etapa é crucial para a segmentação, pois permite separar claramente o objeto de interesse do restante da imagem, simplificando assim o processo de identificação e análise do objeto.
+
+Preenchimento de Áreas Conectadas (Flood Fill):
+Descrição: O algoritmo de preenchimento de áreas conectadas é utilizado para preencher o objeto segmentado a partir de um ponto interno, garantindo que toda a região do objeto seja identificada de forma completa.
+Justificativa: Este passo é importante para garantir a integridade do objeto segmentado, especialmente em casos onde existem lacunas ou falhas na detecção de bordas, garantindo assim uma segmentação mais precisa.
+
+Remoção de Ruído:
+Descrição: Um algoritmo de remoção de ruído é aplicado para eliminar pequenos objetos ou imperfeições na imagem que não fazem parte do objeto de interesse.
+Justificativa: Esta etapa de pós-processamento é essencial para refinar a segmentação, garantindo que apenas o objeto de interesse seja mantido na imagem final e eliminando componentes indesejados que possam interferir na análise subsequente.
