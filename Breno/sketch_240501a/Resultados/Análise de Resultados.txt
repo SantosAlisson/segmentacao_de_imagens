@@ -16,6 +16,9 @@ Preenchimento: A função preenchimento é utilizada para preencher todos os pix
 
 Sobrepor: A função sobrepor tem como objetivo combinar visualmente a imagem original com os resultados da segmentação, mas especificamente as bordasidentificadas do objeto. Essa combinação permite visualizar onde exatamente na imagem original o algoritmo detectou as bordas do objeto , o que é uma maneira eficaz de validar visualmente a precisão da segmentação.
 
+
+Resultados de falsos Positivos e Negativos
+
 Verdadeiros Positivos (VP): 6199
 Falsos Positivos (FP): 24107
 Falsos Negativos (FN): 604
