@@ -1,4 +1,4 @@
-Metodologia
+Metodologias
 
 Histograma Brilho: A função histograma de brilho é utilizado para plotar e calcular um histograma com os valores de distribuição de brilho das imagens.
 
@@ -15,6 +15,11 @@ Detecção de bordas: A detecção de bordas é uma técnica crucial porque dest
 Preenchimento: A função preenchimento é utilizada para preencher todos os pixels que estão do lado de dentro da borda. 
 
 Sobrepor: A função sobrepor tem como objetivo combinar visualmente a imagem original com os resultados da segmentação, mas especificamente as bordasidentificadas do objeto. Essa combinação permite visualizar onde exatamente na imagem original o algoritmo detectou as bordas do objeto , o que é uma maneira eficaz de validar visualmente a precisão da segmentação.
+
+
+Dificuldades & Soluções 
+
+Eu acredito que a minha maior dificuldade durante a implementação do código foi encontrar uma maneira efetiva de fazer a detecção de bordas. A presença de sombras e outras bordas na imagem tornava especialmente difícil identificar as bordas mais externas para a segmentação do objeto. Para solucionar este problema, implementei a limiarização, que estabelece as variações de intensidade. Isso simplifica o objeto, fazendo com que as bordas internas 'desapareçam' e as bordas externas sejam identificadas com maior facilidade.
 
 
 Resultados de falsos Positivos e Negativos
